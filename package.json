@@ -4,18 +4,22 @@
   "version": "0.0.1",
   "description": "What am I about?",
   "main": "server.js",
-  "scripts": {"predeploy": "npm run build",
-   "deploy": "gh-pages -d build",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "node --watch server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "react-scripts build"
   },
   "dependencies": {
+    "@types/gh-pages": "^6.1.0",
     "bcrypt": "~5.0.0",
     "connect-mongo": "~3.2.0",
     "cookie-parser": "~1.4.5",
     "dotenv": "^8.6.0",
     "express": "^4.16.1",
     "express-session": "~1.17.1",
+    "gasket": "^2.0.1",
     "mongodb": "^3.7.4",
     "mongoose": "^8.4.1",
     "passport": "^0.4.1",
@@ -23,6 +27,7 @@
     "passport-local": "~1.0.0",
     "passport.socketio": "~3.7.0",
     "pug": "~3.0.0",
+    "react-scripts": "^5.0.1",
     "socket.io": "~2.3.0"
   },
   "keywords": [
@@ -34,6 +39,19 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "nodemon": "^2.0.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
