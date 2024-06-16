@@ -1,9 +1,11 @@
 {
+  "homepage": "austin-buckley.github.io/Chatroom/",
   "name": "fcc-advanced-node-and-express",
   "version": "0.0.1",
   "description": "What am I about?",
   "main": "server.js",
-  "scripts": {
+  "scripts": {"predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "start": "node --watch server.js",
     "dev": "nodemon server.js"
   },
